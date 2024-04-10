@@ -17,6 +17,7 @@ function wktToLatLngArray(wkt) {
 }
 
 function init(ps, latCenter, lngCenter) {
+
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: latCenter, lng: lngCenter},
         zoom: 13,
@@ -96,6 +97,7 @@ function init(ps, latCenter, lngCenter) {
         });
         infowindow.open(map, marker);
         infoWin = infowindow;
+        input.value = "";
     });
 }
 
