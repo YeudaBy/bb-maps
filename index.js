@@ -19,7 +19,7 @@ function wktToLatLngArray(wkt) {
 function init(ps, latCenter, lngCenter) {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: latCenter, lng: lngCenter},
-        zoom: 15,
+        zoom: 13,
         // disable buttons
         disableDefaultUI: true,
     });
@@ -92,7 +92,7 @@ function init(ps, latCenter, lngCenter) {
         bounds.extend(marker.getPosition());
         // add bound with the name of the polygon
         const infowindow = new google.maps.InfoWindow({
-            content: `<h2 style="margin: 10px; text-align: center">${match.name}</h2>`
+            content: `<h2 style="margin: 1rem; text-align: center">${match.name}</h2>`
         });
         infowindow.open(map, marker);
         infoWin = infowindow;
